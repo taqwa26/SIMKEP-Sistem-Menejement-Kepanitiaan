@@ -1,0 +1,55 @@
+<b>Devisi : <?php print_r($devisi[$i])?></b> <br/>
+
+							<br/><br/>
+							
+							<?php for($i=0; $i<$devisicount; $i++) {?>  
+							
+							<div class="form-group">
+								<label for="nama"><b>Devisi</b>*</label>
+								<select name="nama"class="form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>">
+									<option value="">-PILIH-</option>
+									<?php foreach($devisi as $devisiv):?>
+	                    			<option value="<?php echo $devisiv->devisi;?>"><?php echo $devisiv->devisi;?></option>
+	                    			<?php endforeach;?>
+	                    		</select>
+								<div class="invalid-feedback">
+									<?php echo form_error('nama') ?>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="jumlah">Jumlah Staff Anggota*</label>
+								<select name="jumlah<?=$i?>"class="form-control <?php echo form_error('jumlah') ? 'is-invalid':'' ?>">
+									<option value="0">-PILIH-</option>
+	                    			<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+	                    		</select>
+								<div class="invalid-feedback">
+									<?php echo form_error('jumlah') ?>
+								</div>
+							</div>
+							<input type="hidden" name="devisi<?=$i?>" value="<?=$i?>" />
+							<?php } ?>
+							<input type="hidden" name="count" value="<?php echo $devisicount?>" />
+							
+							<br/><br/>
+							
+							            $query="SELECT de.devisi_id, de.devisi, de.nama, de.keterangan, de.panitia_id, de.relasi,
+            st.staff_id, st.no_absen, st.name, st.status, st.jabatan, st.keterangan, st.prioritas, st.panitia_id, st.devisi_id,
+            ke.kepanitiaan_id, ke.nama, ke.tanggal, ke.keterangan, ke.relasi
+            FROM devisi as de, staff as st, kepanitiaan as ke 
+            WHERE st.devisi_id=de.relasi AND st.panitia_id=de.panitia_id=ke.relasi order by st.name asc";
+            return $this->db->query($query)->result();

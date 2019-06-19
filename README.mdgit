@@ -1,0 +1,1 @@
+"# SIMKEP-Sistem-Menejement-Kepanitiaan"  initgit add README.mdgit commit -m "first commit"git remote add origin https://github.com/taqwa26/SIMKEP-Sistem-Menejement-Kepanitiaan.gitgit push -u origin master
