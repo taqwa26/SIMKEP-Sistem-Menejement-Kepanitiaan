@@ -60,11 +60,12 @@ class Devisi_model extends CI_Model
     {
         // $query="SELECT staff_id FROM staff WHERE name = 'nama'";
         // $data["staff_id"]=$this->db->query($query)->result();
-        $post = $this->input->post();
-        $this->devisi = $post["devisi"];
-        $this->nama= $post["nama"];
-        $this->keterangan = $post["keterangan"];
-        $this->db->insert($this->_table, $this);
+        
+        $post = $this->input->post(); //ambil data dari form
+        $this->devisi = $post["devisi"]; //isi field devisi
+        $this->nama= $post["nama"]; //isi field nama
+        $this->keterangan = $post["keterangan"]; //isi field keterangan
+        $this->db->insert($this->_table, $this); //simpan data ke database
 
         $query="UPDATE staff, devisi
         SET staff.kep_dev=2

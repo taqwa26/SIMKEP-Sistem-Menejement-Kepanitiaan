@@ -88,4 +88,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 |
 |______________________________________________________________
 */
-define('SITE_NAME', 'Sistem Menejement Kepanitiaan');
+define('SITE_NAME', 'Sistem Management Kepanitiaan');
