@@ -30,6 +30,7 @@
 								<thead>
 									<tr>
 										<th>No. Absen</th>
+										<th>Foto</th>
 										<th>Nama</th>
 										<th>Status</th>
 										<th>Jabatan</th>
@@ -43,7 +44,10 @@
 										<td>
 											<?php echo $staffv->no_absen ?>
 										</td>
-										<td width="150">
+										<td>
+											<img src="<?php echo base_url('upload/staff/'.$staffv->foto) ?>" width="64" />
+										</td>
+										<td>
 											<?php echo $staffv->name ?>
 										</td>
 										<td>

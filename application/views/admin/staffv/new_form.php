@@ -31,6 +31,7 @@
 					<div class="card-body">
 
 						<form action="<?php base_url('admin/staff/add') ?>" method="post" enctype="multipart/form-data" >
+						
 							<div class="form-group">
 								<label for="name">Nama*</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
@@ -77,6 +78,15 @@
 								<div class="invalid-feedback">
 									<?php echo form_error('keterangan') ?>
 								</div>
+							</div>
+
+							<div class="form-group">
+									<label for="foto">Foto</label>
+									<input class="form-control-file <?php echo form_error('foto') ? 'is-invalid':'' ?>"
+										type="file" name="foto" />
+									<div class="invalid-feedback">
+										<?php echo form_error('foto') ?>
+									</div>
 							</div>
 
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />

@@ -49,7 +49,7 @@
 							<div class="form-group">
 								<label for="absen">No. Absen*</label>
 								<input class="form-control <?php echo form_error('absen') ? 'is-invalid':'' ?>"
-								 type="number" name="absen" placeholder="Nomor Absen Staff" value="<?php echo $staff->name ?>" />
+								 type="number" name="absen" placeholder="Nomor Absen Staff" value="<?php echo $staff->no_absen ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('absen') ?>
 								</div>
@@ -82,6 +82,16 @@
 								 name="keterangan" placeholder="staff keterangan..."><?php echo $staff->keterangan ?></textarea>
 								<div class="invalid-feedback">
 									<?php echo form_error('keterangan') ?>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="foto">Photo</label>
+								<input class="form-control-file <?php echo form_error('foto') ? 'is-invalid':'' ?>"
+								type="file" name="foto" />
+								<input type="hidden" name="old_foto" value="<?php echo $staff->foto ?>" />
+								<div class="invalid-feedback">
+									<?php echo form_error('foto') ?>
 								</div>
 							</div>
 

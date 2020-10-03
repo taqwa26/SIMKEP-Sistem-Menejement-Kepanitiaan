@@ -1,3 +1,0 @@
-UPDATE `kepanitiaan` SET `kepanitiaan_id` = NULL, `nama` = 'gedung', `tanggal` = '2019-05-04', `keterangan` = '9090', `kepantiaan_id` = '2' WHERE `kepanitiaan_id` = '2'
-
-Filename: C:/xampp/htdocs/SIMKEP/system/database/DB_driver.php
